@@ -1,0 +1,21 @@
+﻿@model Reservation
+
+@{
+    ViewData["Title"] = "Reservation Details";
+}
+
+<div class="container mt-5">
+    <h2>Reservation Details</h2>
+    <div class="card">
+        <div class="card-header">
+            <h4>Reservation for @Model.User.Username</h4>
+        </div>
+        <div class="card-body">
+            <p><strong>Reservation ID:</strong> @Model.ReservationID</p>
+            <p><strong>User:</strong> @Model.User.Username</p>
+            <p><strong>Date:</strong> @Model.Date.ToShortDateString()</p>
+            <p><strong>Time:</strong> @Model.Time.ToString(@"hh\:mm")</p>
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</div>

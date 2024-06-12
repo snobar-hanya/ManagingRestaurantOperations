@@ -1,0 +1,20 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "User Details";
+}
+
+<div class="container mt-5">
+    <h2>User Details</h2>
+    <div class="card">
+        <div class="card-header">
+            <h4>@Model.Username</h4>
+        </div>
+        <div class="card-body">
+            <p><strong>UserID:</strong> @Model.UserID</p>
+            <p><strong>Username:</strong> @Model.Username</p>
+            <p><strong>Role:</strong> @Model.Role</p>
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</div>
